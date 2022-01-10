@@ -1,49 +1,141 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php 
+session_start(); 
+$key1 = rand(1,100);
+$key2 = rand(5,35);
+$_SESSION['result_key'] = $key1 + $key2;
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/css.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Обратная связь AJAX</title>
+<style type="text/css">
+body{
+    background-color: white;
+}
+#feedback-form li{
+margin-top: 30px; 
+list-style-type:none;
+}
+#feedback-form > li >  input{
+  border-radius:10px ; 
+ -webkit-border-radius:10px ; 
+ -moz-border-radius:10px ;
+ width: 300px;
+ height: 23px;  
+ border: 1px solid #D3D7DC;
+ padding-left: 10px;
+ padding-right: 10px;
+ color:  black;
+ font: 15px sans-serif; 
+}
+#feedback-form > li >  input:focus{
+ border: 1px solid #C5E5FF;
+}
+#feedback-form > li >  textarea{
+  border-radius:10px ; 
+ -webkit-border-radius:10px ; 
+ -moz-border-radius:10px ;
+ width: 300px;
+ height: 100px;  
+ border: 1px solid #D3D7DC;
+ padding-left: 10px;
+ padding-right: 10px;
+ color:  black; 
+ font: 15px sans-serif; 
+}
+#feedback-form > li >  textarea:focus{
+ border: 1px solid #C5E5FF;
+}
+#feedback-form > li > label{
+position: absolute;
+margin-top: -20px;
+font: 14px sans-serif;
+}
+#block-key p{
+    float: left;
+    margin: 5px 0;
+    font: 15px sans-serif;
+    margin-right: 10px;
+}
+#block-key input{
+  border-radius:10px ; 
+ -webkit-border-radius:10px ; 
+ -moz-border-radius:10px ;
+ width: 100px;
+ height: 23px;  
+ border: 1px solid #D3D7DC;
+ padding-left: 10px;
+ padding-right: 10px;
+ color:  black; 
+ font: 15px sans-serif;
+}
+#block-key input:focus{
+ border: 1px solid #C5E5FF;
+}
+.error{
+    color: #FF7F7F;
+    font: 11px sans-serif;
+    display: block;
+    margin-top: 4px;
+}
+.message-feedback{
+    display: none;
+}
+#message-feedback-error{
+    font: 13px sans-serif;
+    color: red;
+    background-color: #FFECEC;
+    border: 1px solid #FFDFDF;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+#message-feedback-good{
+    font: 13px sans-serif;
+    color: black;
+    background-color: #E4E9F2;
+    border: 1px solid #D7DBE4;
+    padding-left: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+#submit-send{
+  width: 100%; 
+  height: 30px; 
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #E4EAF0;
+}
+#submit-send:hover{
+  background-color: #DEE4EA;
+}
+</style>
 </head>
+
+
 <body>
-     <div class="gallery">
-         <div class="gallery-content">
-            <img src="img/img-1.png" alt="наполнение">
-            <img class="img-ml-22 ml-22-m" src="img/img-2.png" alt="наполнение">
-            <img class="img-ml-22" src="img/img-3.png" alt="наполнение">
-            <img src="img/img-4.png" class="ml-22-m" alt="наполнение">
-            <img class="img-ml-22" src="img/img-5.png" alt="наполнение">
-         </div>
-        <div class="gallery-link-wrap">
-            <a href="#" class="gallery-link">ПЕРЕЙТИ</a>
-        </div>
-     </div>
-     <div class="banner">
-         <div class="banner-content">
-             <div class="banner-content--txt">
-                 <p>2022</p>
-                 <h1>Какие очки в сезоне?</h1>
-             </div>
-             <div class="banner-content--link">
-                 <a href="#">перейти</a>
-             </div>
-         </div>
-     </div> 
-     <div class="description">
-            <div class="description-content">
-                <h2>Наполнение для СЕО текста</h2>
-                <div class="description-content--txt">Lorem ipsum dolor sit amet, ei sea munere singulis efficiantur, ex sit tempor inimicus eloquentiam. Ornatus volumus an ius. Nec et diam aliquam temporibus, choro delenit dignissim sit ex. Vix ea aliquid corpora lobortis, pro cu nostrum efficiantur interpretaris, apeirian consequuntur in usu. Debitis delectus in mel, tractatos eloquentiam cu duo. Case eros erant sed no, cum facete equidem fuisset at, antiopam suavitate explicari nam te.</div>
-                <div class="description-content--txt description-content--txt-readmore">
-                <p class="op">Nam soleat pertinacia eu, eos diam repudiare liberavisse eu, in sed dicunt similique. Platonem partiendo te pri, ludus convenire ex vim.</p>
-                <p class="op01">Graece possim adversarium ex eam. Quo natum maiestatis ex.</p>
-                </div>
-              <div class="description--link"><a href="#">ПЕРЕЙТИ</a></div>
-            </div>
-        </div>
+<p class="message-feedback"></p>
+<form method="post" id="feedback-valid" action="sendmail.php" >
+<ul id="feedback-form" >
+<li><label>Имя</label><input type="text" name="feedback_name" /></li>
+<li><label>E-mail</label><input type="text" name="feedback_email" /></li>
+<li><label>Тема</label><input type="text" name="feedback_subject" /></li>
+<li><label>Сообщение</label><textarea name="feedback_txt" ></textarea></li>
+<li><label>Код проверки</label>
+<div id="block-key" >
+<p><?=$key1; ?> + <?=$key2; ?> =</p> <input type="text" name="feedback_key" />
+</div>
+</li>
+</ul>
+<input type="submit" id="submit-send" value="Отправить" />
+</form>
+
+<p style="margin:80px 0 0;text-align:center;color:#900000;font-weight:bold;">Материал скачан с сайта: <a href="http://age-dragon.com/scripts/59-obratnaya-svyaz-ajax.html" target="_blank">Age-Dragon.com</a></p>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript" src="js/feedback-valid.js"></script>
+
 </body>
 </html>
