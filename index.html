@@ -8,7 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="kylform">Обратная связь</div>
+
+    <div id="kylform">
+        <div class="kylform_header">Обратная связь</div>
+        <form action="send.php" method="post" autocomplete="off">
+            <div class="pad">
+                <p>Описание для формы если потребуется, например надпись "Заполните все поля".</p>
+                <input type="text" name="name" class="ico_name" placeholder="Имя">
+                <input type="text" name="phone" class="ico_phone" placeholder="Контактный телефон">
+                <input type="text" name="email" class="ico_email" placeholder="E-mail (не обязательно)">
+                <input type="submit" id="send" value="Отправить">
+                <div class="answer"></div>
+            </div>
+        </form>
+        <a href="#" class="kylform_close"></a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/js.js"></script>    
 </body>
 </html>
