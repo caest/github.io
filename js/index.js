@@ -1,9 +1,9 @@
-let pass = prompt('Password');
+let pass = prompt('Введите пароль');
 
-if (pass == 'love16') {
-    alert('Я тебя люблю!')
+if (pass == 'ps1ps3ps2ps4ps5') {
+    alert('Добро пожаловать')
     document.location.href = 'pass.html';
 } else {
-    alert('Подумай родная!');
+    alert('Неверный пароль!');
     document.location.reload()
 }
