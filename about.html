@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper.css">
-    <title>metall</title>
+    <title>Metall About</title>
 </head>
 <body>
     <header>
@@ -29,7 +29,7 @@
          <div class="container">
             <div class="header-bottom-content">
                 <div class="header-logo-wrap">
-                    <a href="#" class="header-logo">
+                    <a href="index.html" class="header-logo">
                         logo
                     </a>
                 </div>
@@ -41,11 +41,11 @@
                     </div>
                     <div class="nav-burger-menu menu">
                         <ul class="nav-list menu">
-                            <li><a href="#" class="nav-link">Главная</a></li>
-                            <li><a href="#" class="nav-link nav-link-dropdown">Каталог товара</a></li>
-                            <li><a href="#" class="nav-link">О нас</a></li>
+                            <li><a href="index.html" class="nav-link">Главная</a></li>
+                            <li><a href="catalog.html" class="nav-link nav-link-dropdown">Каталог товара</a></li>
+                            <li><a href="about.html" class="nav-link">О нас</a></li>
                             <li><a href="#" class="nav-link">Доставка и оплата</a></li>
-                            <li><a href="#" class="nav-link">Контакты</a></li>
+                            <li><a href="contact.html" class="nav-link">Контакты</a></li>
                         </ul>
                         <form class="header-form mobile-search-form" action="">
                             <input placeholder="Поиск" type="search" name="" id="">
@@ -78,9 +78,13 @@
                     <p>Оборот компании увеличился с 1000 тонн в год до 40 000 тонн в год. Мы клиентоориентированная компания. Нам интересен любой заказ и любой клиент. Для постоянных клиентов разработали специальные условия работы.</p>
                     <a href="#">Читать подробнее</a>
                     </div>
-                <div class="description-content--column">
-                    <video poster="img/poster.png" controls src="video/videoplayback.mp4"></video>
-                </div>
+                    <div class="description-content--column">
+
+                        <video class="video" poster="img/poster.png">
+                            <source src="video/videoplayback.mp4" type="video/mp4" />
+                        </video>
+                      <div class="playpause"></div>
+              </div>
             </div>
             <div class="description-about-content">
                 <div class="description-about-content-img">
@@ -151,10 +155,10 @@
                 </div>
                 <div class="footer-nav">
                     <ul class="footer-nav-list">
-                        <li class="footer-list-item"><a href="#">О нас</a></li>
-                        <li class="footer-list-item"><a href="#">Каталог</a></li>
+                        <li class="footer-list-item"><a href="about.html">О нас</a></li>
+                        <li class="footer-list-item"><a href="catalog.html">Каталог</a></li>
                         <li class="footer-list-item"><a href="#">Доставка и оплата</a></li>
-                        <li class="footer-list-item"><a href="#">Контакты</a></li>
+                        <li class="footer-list-item"><a href="contact.html">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="footer-social">
@@ -168,6 +172,7 @@
             <div class="footer-copyright">Company Name. Все права защищены @ 2022</div>
         </div>
     </footer> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
