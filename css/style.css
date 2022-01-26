@@ -1399,10 +1399,9 @@ input::-webkit-search-results-decoration { display: none; }
 .contact-info-container {
     position: relative;
 }
-.contact-info-container img{
-    position: absolute;
-    display: none;
-}
+ .contact-info-container img{
+    margin-bottom: 10px;
+} 
 .contact-info-container {
      margin: 20px 0; 
 }
