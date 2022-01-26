@@ -1,16 +1,505 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css" />
-    <title>Portfolio</title>
-  </head>
- <body>
-     <script src="js/index.js"></script>
- </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <title>metall</title>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top--content">
+                    <div class="header-top--info">
+                        <a href="#" class="header-top--info-link header-link-location"><img src="img/loc.svg" alt=""> г. Москва, ул. Стародубова 19</a>
+                        <a href="mailto:service.metalobaza@.ru" class="header-top--info-link header-link-email"><img src="img/mail.svg" alt=""> service.metalobaza@.ru</a>
+                        <a href="tel:8(495)766-16-19" class="header-top--info-link header-link-phone"><img src="img/phone.svg" alt=""> 8(495)766-16-19</a>
+                    </div>
+                    <div class="header-top--social">
+                        <a href="#" class="header-social"><img src="img/twitter.svg" alt=""></a>
+                        <a href="#" class="header-social"><img src="img/tg.svg" alt=""></a>
+                        <a href="#" class="header-social"><img src="img/wh.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="container">
+            <div class="header-bottom-content">
+                <div class="header-logo-wrap">
+                    <a href="#" class="header-logo">
+                        logo
+                    </a>
+                </div>
+                <nav class="nav">
+                    <div class="nav-burger-menu-wrap menu-btn">
+                        <span class="nav-burger-line"></span>
+                        <span class="nav-burger-line"></span>
+                        <span class="nav-burger-line"></span>
+                    </div>
+                    <div class="nav-burger-menu menu">
+                        <ul class="nav-list menu">
+                            <li><a href="#" class="nav-link">Главная</a></li>
+                            <li><a href="#" class="nav-link nav-link-dropdown">Каталог товара</a></li>
+                            <li><a href="about.html" class="nav-link">О нас</a></li>
+                            <li><a href="#" class="nav-link">Доставка и оплата</a></li>
+                            <li><a href="#" class="nav-link">Контакты</a></li>
+                        </ul>
+                        <form class="header-form mobile-search-form" action="">
+                            <input placeholder="Поиск" type="search" name="" id="">
+                            <button ><img src="img/search.svg" alt=""></button>
+                        </form>
+                    </div>
+                </nav>
+                 <form class="header-form" action="">
+                    <input placeholder="Поиск" type="search" name="" id="">
+                    <button ><img src="img/search.svg" alt=""></button>
+                </form>
+            </div>
+        </div> 
+    </header>
+   <section class="hero" >
+        <div class="container">
+            <div class="hero-content">
+                <h1> Новые товары уже<br>
+                    в продаже!</h1>
+                <div class="">
+                    <a href="#" class="hero-link">Перейти в каталог</a>
+                </div>
+            </div>
+        </div>
+    </section>
+     <section class="description">
+        <div class="container">
+            <div class="description-content">
+                <div class="description-content--column">
+                    <h1>На рынке металлопроката мы <span>работаем</span> уже <span>15 лет</span>!</h1>
+                    <p>Мы небольшая компания с большими амбициями. Работаем с 2014 года. За это время мы выросли от одного склада и пяти авто до пяти складов по МО и 40 авто в автопарке. Время доставки сократилось с 24 часов до двух в зависимости от расстояний. Иногда быстрее.</p>
+                    <p>Оборот компании увеличился с 1000 тонн в год до 40 000 тонн в год. Мы клиентоориентированная компания. Нам интересен любой заказ и любой клиент. Для постоянных клиентов разработали специальные условия работы.</p>
+                    <a href="#">Читать подробнее</a>
+                    </div>
+                <div class="description-content--column">
+                    <video poster="img/poster.png" controls src="video/videoplayback.mp4"></video>
+                </div>
+            </div>
+        <div class="description-card-wrap">
+                <div class="description-card">
+                    <img src="img/card-1.svg" alt="">
+                    <p>Беспроцентная рассрочка до года</p>
+                </div>
+                <div class="description-card">
+                    <img src="img/card-1.svg" alt="">
+                    <p>Беспроцентная рассрочка до года</p>
+                </div>
+                <div class="description-card">
+                    <img src="img/card-1.svg" alt="">
+                    <p>Беспроцентная рассрочка до года</p>
+                </div>
+                <div class="description-card">
+                    <img src="img/card-1.svg" alt="">
+                    <p>Беспроцентная рассрочка до года</p>
+                </div>
+            </div>  
+        </div>
+    </section> 
+   <section class="slider-product-wrap ">
+         <div class="container"> 
+           <h2 class="slider-product-title">Наши товары</h2> </div>
+     
+      <div class="container-slider-product"> 
+      
+            <div class="slider-product swiper mySwiper">
+              <!--   <h2 class="slider-product-title">Наши товары</h2> -->
+                <div class="swiper-wrapper">
+                <div class="slide-product swiper-slide">
+                    <div class="product-card">
+                        <img src="img/prodcut-grid.png" alt="">
+                        <div class="product-title">Черный металлопрокат</div>
+                        <div class="product-info">
+                            <div class="">
+                                <p class="">Кол-во товаров: <span>141</span></p>
+                            </div>
+                            <div class="">
+                                <p class="">Мин.цена товара <span>10 000</span></p>
+                            </div>
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="slide-product swiper-slide">
+                    <div class="product-card">
+                        <img src="img/prodcut-grid.png" alt="">
+                        <div class="product-title">Черный металлопрокат</div>
+                        <div class="product-info">
+                            <div class="">
+                                <p class="">Кол-во товаров: <span>141</span></p>
+                            </div>
+                            <div class="">
+                                <p class="">Мин.цена товара <span>10 000</span></p>
+                            </div>
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="slide-product swiper-slide">
+                    <div class="product-card">
+                        <img src="img/prodcut-grid.png" alt="">
+                        <div class="product-title">Черный металлопрокат</div>
+                        <div class="product-info">
+                            <div class="">
+                                <p class="">Кол-во товаров: <span>141</span></p>
+                            </div>
+                            <div class="">
+                                <p class="">Мин.цена товара <span>10 000</span></p>
+                            </div>
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="slide-product swiper-slide">
+                    <div class="product-card">
+                        <img src="img/prodcut-grid.png" alt="">
+                        <div class="product-title">Черный металлопрокат</div>
+                        <div class="product-info">
+                            <div class="">
+                                <p class="">Кол-во товаров: <span>141</span></p>
+                            </div>
+                            <div class="">
+                                <p class="">Мин.цена товара <span>10 000</span></p>
+                            </div>
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="slide-product swiper-slide">
+                    <div class="product-card">
+                        <img src="img/prodcut-grid.png" alt="">
+                        <div class="product-title">Черный металлопрокат</div>
+                        <div class="product-info">
+                            <div class="">
+                                <p class="">Кол-во товаров: <span>141</span></p>
+                            </div>
+                            <div class="">
+                                <p class="">Мин.цена товара <span>10 000</span></p>
+                            </div>
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="slide-product swiper-slide">
+                    <div class="product-card">
+                        <img src=" img/prodcut-grid.png" alt="">
+                        <div class="product-title">Черный металлопрокат</div>
+                        <div class="product-info">
+                            <div class="">
+                                <p class="">Кол-во товаров: <span>141</span></p>
+                            </div>
+                            <div class="">
+                                <p class="">Мин.цена товара <span>10 000</span></p>
+                            </div>
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="slide-product swiper-slide">
+                    <div class="product-card">
+                        <img src=" img/prodcut-grid.png" alt="">
+                        <div class="product-title">Черный металлопрокат</div>
+                        <div class="product-info">
+                            <div class="">
+                                <p class="">Кол-во товаров: <span>141</span></p>
+                            </div>
+                            <div class="">
+                                <p class="">Мин.цена товара <span>10 000</span></p>
+                            </div>
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="slide-product swiper-slide">
+                    <div class="product-card">
+                        <img src=" img/prodcut-grid.png" alt="">
+                        <div class="product-title">Черный металлопрокат</div>
+                        <div class="product-info">
+                            <div class="">
+                                <p class="">Кол-во товаров: <span>141</span></p>
+                            </div>
+                            <div class="">
+                                <p class="">Мин.цена товара <span>10 000</span></p>
+                            </div>
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="slide-product swiper-slide">
+                    <div class="product-card">
+                        <img src=" img/prodcut-grid.png" alt="">
+                        <div class="product-title">Черный металлопрокат</div>
+                        <div class="product-info">
+                            <div class="">
+                                <p class="">Кол-во товаров: <span>141</span></p>
+                            </div>
+                            <div class="">
+                                <p class="">Мин.цена товара <span>10 000</span></p>
+                            </div>
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="slide-product swiper-slide">
+                    <div class="product-card">
+                        <img src=" img/prodcut-grid.png" alt="">
+                        <div class="product-title">Черный металлопрокат</div>
+                        <div class="product-info">
+                            <div class="">
+                                <p class="">Кол-во товаров: <span>141</span></p>
+                            </div>
+                            <div class="">
+                                <p class="">Мин.цена товара <span>10 000</span></p>
+                            </div>
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-button-prev slider-product-prev"></div>
+                <div class="swiper-button-next slider-product-next"></div>
+            </div>
+       </div>
+       <div class="product-slider-link-wrap">
+           <a href="#" class="product-slider-link">Перейти в каталог</a>
+        </div>
+    </section> 
+     <section class="reviews">
+        <div class="container">
+            <h4 class="reviews-title">
+                Отзывы наших <br><span>постоянных клиентов</span>
+            </h4>
+            <div class="reviews-slider swiper swiper-reviews">
+                <div class="swiper-wrapper">
+                <div class="reviews-container swiper-slide">
+                     
+                    <div class="container-reviews-row">
+                        <div class="reviews-img">
+                            <img src="img/reviews.png" alt="">
+                        </div>
+                        <div class="reviews-txt">
+                            <p>Андрей Чернышев, ООО ИнвестГрупп</p>
+                            <span>Для нашей компании очень важны надежные поставщики, которые могут предложить нам лучшие условия на рынке. Толстые листы NLMK DanSteel мы используем для производства стальных опор ветряных мельниц, в основном в странах Северной Европы.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-container swiper-slide">
+                     
+                    <div class="container-reviews-row">
+                        <div class="reviews-img">
+                            <img src="img/reviews.png" alt="">
+                        </div>
+                        <div class="reviews-txt">
+                            <p>Андрей Чернышев, ООО ИнвестГрупп</p>
+                            <span>Для нашей компании очень важны надежные поставщики, которые могут предложить нам лучшие условия на рынке. Толстые листы NLMK DanSteel мы используем для производства стальных опор ветряных мельниц, в основном в странах Северной Европы.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-container swiper-slide">
+                     
+                    <div class="container-reviews-row">
+                        <div class="reviews-img">
+                            <img src="img/reviews.png" alt="">
+                        </div>
+                        <div class="reviews-txt">
+                            <p>Андрей Чернышев, ООО ИнвестГрупп</p>
+                            <span>Для нашей компании очень важны надежные поставщики, которые могут предложить нам лучшие условия на рынке. Толстые листы NLMK DanSteel мы используем для производства стальных опор ветряных мельниц, в основном в странах Северной Европы.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-container swiper-slide">
+                     
+                    <div class="container-reviews-row">
+                        <div class="reviews-img">
+                            <img src="img/reviews.png" alt="">
+                        </div>
+                        <div class="reviews-txt">
+                            <p>Андрей Чернышев, ООО ИнвестГрупп</p>
+                            <span>Для нашей компании очень важны надежные поставщики, которые могут предложить нам лучшие условия на рынке. Толстые листы NLMK DanSteel мы используем для производства стальных опор ветряных мельниц, в основном в странах Северной Европы.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-container swiper-slide">
+                     
+                    <div class="container-reviews-row">
+                        <div class="reviews-img">
+                            <img src="img/reviews.png" alt="">
+                        </div>
+                        <div class="reviews-txt">
+                            <p>Андрей Чернышев, ООО ИнвестГрупп</p>
+                            <span>Для нашей компании очень важны надежные поставщики, которые могут предложить нам лучшие условия на рынке. Толстые листы NLMK DanSteel мы используем для производства стальных опор ветряных мельниц, в основном в странах Северной Европы.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-container swiper-slide">
+                     
+                    <div class="container-reviews-row">
+                        <div class="reviews-img">
+                            <img src="img/reviews.png" alt="">
+                        </div>
+                        <div class="reviews-txt">
+                            <p>Андрей Чернышев, ООО ИнвестГрупп</p>
+                            <span>Для нашей компании очень важны надежные поставщики, которые могут предложить нам лучшие условия на рынке. Толстые листы NLMK DanSteel мы используем для производства стальных опор ветряных мельниц, в основном в странах Северной Европы.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-container swiper-slide">
+                     
+                    <div class="container-reviews-row">
+                        <div class="reviews-img">
+                            <img src="img/reviews.png" alt="">
+                        </div>
+                        <div class="reviews-txt">
+                            <p>Андрей Чернышев, ООО ИнвестГрупп</p>
+                            <span>Для нашей компании очень важны надежные поставщики, которые могут предложить нам лучшие условия на рынке. Толстые листы NLMK DanSteel мы используем для производства стальных опор ветряных мельниц, в основном в странах Северной Европы.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-container swiper-slide">
+                     
+                    <div class="container-reviews-row">
+                        <div class="reviews-img">
+                            <img src="img/reviews.png" alt="">
+                        </div>
+                        <div class="reviews-txt">
+                            <p>Андрей Чернышев, ООО ИнвестГрупп</p>
+                            <span>Для нашей компании очень важны надежные поставщики, которые могут предложить нам лучшие условия на рынке. Толстые листы NLMK DanSteel мы используем для производства стальных опор ветряных мельниц, в основном в странах Северной Европы.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews-slider-arrow">
+                <div class="swiper-button-prev slider-reviews-prev"></div>
+                <div class="swiper-button-next slider-reviews-next"></div>
+                <div class="swiper-pagination reviews-pagination"></div>
+            </div>
+          
+            </div>
+        </div>
+    </section> 
+   <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h3>Мы свяжемся с вами моментально</h3>
+                <p>Для нашей компании очень важны надежные поставщики, которые могут 
+                    предложить нам лучшие условия на рынке.</p>
+                <form action="" class="form-cta">
+                    <input required type="name" placeholder="Имя">
+                    <input required type="tel" placeholder="Телефон">
+                    <button>Заказать звонок</button>
+                </form>
+            </div>
+        </div>
+    </section>  
+    <section class="last-news">
+        <div class="container">
+            <h4 class="slider-news-title">Последние новости</h4>
+        </div>
+        <div class="container-slider-product"> 
+      
+            <div class="slider-news swiper slider-news">
+               
+                <div class="swiper-wrapper">
+                <div class="news-slide swiper-slide">
+                    <div class="news-card">
+                        <img src="img/news-card-1.png" alt="">
+                        <div class="news-title">Подшипниковые стали: виды, свойства, применение</div>
+                        <div class="news-info">
+                            В условиях современного инжиниринга производственные механизмы, бытовую технику, приборы и автотранспорт все шире оснащают подшипниками...
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="news-slide swiper-slide">
+                    <div class="news-card">
+                        <img src="img/news-card-2.png" alt="">
+                        <div class="news-title">Подшипниковые стали: виды, свойства, применение</div>
+                        <div class="news-info">
+                            В условиях современного инжиниринга производственные механизмы, бытовую технику, приборы и автотранспорт все шире оснащают подшипниками...
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="news-slide swiper-slide">
+                    <div class="news-card">
+                        <img src="img/news-card-3.png" alt="">
+                        <div class="news-title">Подшипниковые стали: виды, свойства, применение</div>
+                        <div class="news-info">
+                           В условиях современного инжиниринга производственные механизмы, бытовую технику, приборы и автотранспорт все шире оснащают подшипниками...
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="news-slide swiper-slide">
+                    <div class="news-card">
+                        <img src="img/news-card-1.png" alt="">
+                        <div class="news-title">Подшипниковые стали: виды, свойства, применение</div>
+                        <div class="news-info">
+                            В условиях современного инжиниринга производственные механизмы, бытовую технику, приборы и автотранспорт все шире оснащают подшипниками...
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="news-slide swiper-slide">
+                    <div class="news-card">
+                        <img src="img/news-card-2.png" alt="">
+                        <div class="news-title">Подшипниковые стали: виды, свойства, применение</div>
+                        <div class="news-info">
+                          В условиях современного инжиниринга производственные механизмы, бытовую технику, приборы и автотранспорт все шире оснащают подшипниками...
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="news-slide swiper-slide">
+                    <div class="news-card">
+                        <img src="img/news-card-3.png" alt="">
+                        <div class="news-title">Подшипниковые стали: виды, свойства, применение</div>
+                        <div class="news-info">
+                           В условиях современного инжиниринга производственные механизмы, бытовую технику, приборы и автотранспорт все шире оснащают подшипниками...
+                        </div>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-button-prev last-news-slider-prev"></div>
+                <div class="swiper-button-next last-news-slider-next"></div>
+            </div>
+       </div>  
+    </section> 
+  <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    LOGOTYPE
+                </div>
+                <div class="footer-nav">
+                    <ul class="footer-nav-list">
+                        <li class="footer-list-item"><a href="about.html">О нас</a></li>
+                        <li class="footer-list-item"><a href="#">Каталог</a></li>
+                        <li class="footer-list-item"><a href="#">Доставка и оплата</a></li>
+                        <li class="footer-list-item"><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><img src="img/footer-inst.svg" alt=""></a>
+                    <a href="#"><img src="img/footer-in.svg" alt=""></a>
+                    <a href="#"><img src="img/footer-facebook.svg" alt=""></a>
+                    <a href="#"><img src="img/footer-ok.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-copyright">Company Name. Все права защищены @ 2022</div>
+        </div>
+    </footer> 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
